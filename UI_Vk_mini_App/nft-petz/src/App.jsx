@@ -1,12 +1,22 @@
 import './App.css'
 import { useAppContext } from './hooks/useAppContext'
+import defaultProvider from './api/defaultProvider';
+import connectMetaMask from './utils/connectMetaMask';
 
 function App() {
- 
+  const {contextState, updateContextState} = useAppContext();
+  const currentAccount = contextState?.currentAccount;
+
+  const handleConnectWalletClick = async () => {
+    const accountMM = await connectMetaMask();
+    console.log(maticBalance);
+    updateContextState({currentAccount: accountMM});
+    console.log(accountMM);
+  }
 
   return (
     <>
-         <button id="connectWallet">Подключить MetaMask</button>
+         <button onClick={() =>{handleConnectWalletClick()}} id="connectWallet">Подключить MetaMask</button>
 
           <h2>Создание NFT</h2>
           <input
