@@ -39,11 +39,11 @@ function App() {
           <script src="app.js"></script>
 
           {currentAccount && (
-                      <div id="walletInfo">
-                      <strong>Адрес кошелька: {currentAccount.substring(0,6)}...{currentAccount.substring(38)}</strong>
-                      <br></br>
-                      <strong>Сеть: Siberium Testnet</strong> 
-                    </div>
+            <div id="walletInfo">
+            <strong>Адрес кошелька: {currentAccount.substring(0,6)}...{currentAccount.substring(38)}</strong>
+            <br></br>
+            <strong>Сеть: Siberium Testnet</strong> 
+          </div>
           )}
 
 
