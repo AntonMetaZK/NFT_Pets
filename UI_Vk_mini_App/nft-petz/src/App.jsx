@@ -1,6 +1,8 @@
 import './App.css'
+import { useAppContext } from './hooks/useAppContext'
 
 function App() {
+ 
 
   return (
     <>
