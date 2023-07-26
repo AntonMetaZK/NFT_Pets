@@ -9,7 +9,6 @@ function App() {
 
   const handleConnectWalletClick = async () => {
     const accountMM = await connectMetaMask();
-    console.log(maticBalance);
     updateContextState({currentAccount: accountMM});
     console.log(accountMM);
   }
@@ -39,11 +38,14 @@ function App() {
           <script src="ethers.min.js"></script>
           <script src="app.js"></script>
 
-          <div id="walletInfo">
-            <strong>Адрес кошелька:</strong>
-            <span id="walletAddress">Не подключен</span><br />
-            <strong>Сеть:</strong> <span id="network">Не подключен</span>
-          </div>
+          {currentAccount && (
+                      <div id="walletInfo">
+                      <strong>Адрес кошелька: {currentAccount.substring(0,6)}...{currentAccount.substring(38)}</strong>
+                      <br></br>
+                      <strong>Сеть: Siberium Testnet</strong> 
+                    </div>
+          )}
+
 
           <h2>Ваши NFT</h2>
           <div id="userNFTs">Загрузка...</div>
