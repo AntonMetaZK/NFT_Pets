@@ -198,6 +198,7 @@ label{
   height: 104px;
   width: 100vw;
   padding-left: 39px;
+  margin-bottom: 35px;
 }
 
 .walletInfoText{
@@ -212,4 +213,17 @@ label{
   font-family: ITF Devanagari Marathi;
   font-size: 23px;
   line-height: 27px;
+}
+
+#userNFTs{
+  height: 183px;
+  width: 100vw;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ussersNftText{
+  font-size: 23px;
 }

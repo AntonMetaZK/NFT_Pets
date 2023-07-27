@@ -5,10 +5,25 @@ import connectMetaMask from './utils/connectMetaMask';
 import { getNftDnaWithSigner } from './abi/getNFTDNAcontarctWitchSigner';
 import { nftDna } from './abi/NFT_DNA_contract';
 import { parseEther } from 'ethers';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [nftBalance, setNftBalance] = useState(0);
+
   const {contextState, updateContextState} = useAppContext();
   const currentAccount = contextState?.currentAccount;
+
+  useEffect(() => {
+    (async () => {
+      if(typeof currentAccount != undefined){
+        const nftBalance = await nftDna.tokensOfOwner(currentAccount);
+        console.log("nft balance: ", nftBalance)
+        console.log("nft balance type: ", typeof nftBalance)
+        setNftBalance(nftBalance);
+      }
+
+    })()
+  }, [currentAccount])
 
   const handleConnectWalletClick = async () => {
     const accountMM = await connectMetaMask();
@@ -88,7 +103,7 @@ function App() {
 
 
       <h2>Ваши NFT</h2>
-      <div id="userNFTs">Загрузка...</div>
+      <div id="userNFTs"><p className='ussersNftText'>У вас <strong>{Object.keys(nftBalance).length}</strong> НФТ</p> </div>
     </div>
   )
 }
