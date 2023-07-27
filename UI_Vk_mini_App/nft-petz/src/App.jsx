@@ -14,16 +14,33 @@ function App() {
   }
 
   return (
-    <>
-      <button onClick={() =>{handleConnectWalletClick()}} id="connectWallet">Подключить MetaMask</button>
+    <div className='body'>
+      <header>
+        <h1 className='header-text'>NFT CATS</h1>
+      </header>
 
-      <h2>Создание NFT</h2>
-      <input
-        type="number"
-        id="dnaInput"
-        placeholder="Введите ДНК (например, 123456)"
-      />
-      <button id="mintButton">Создать NFT</button>
+      <div className='connection'>
+        <h1 className='connection-header'>Создайте собственного NFT кота</h1>
+        <p className='connection-mainText'>Подключите криптокошелёк, чтобы </p> 
+        <p className='connection-mainText connection-mainText-end'> устанавливать NFT-аватары</p>
+        <button onClick={() =>{handleConnectWalletClick()}} id="connectWallet">Подключить MetaMask <span>&#62;</span></button>
+      </div>
+      
+
+      <form>
+        <label htmlFor='DNA'>Создание NFT</label> 
+        <div className='singleInput'>
+        <input
+            name='DNA'
+            type="number"
+            id="dnaInput"
+            placeholder="Введите ДНК (например, 123456)"
+          />
+          <button id="mintButton">Создать NFT</button>
+        </div>
+      </form>
+
+
 
       <h2>Скрещивание NFT</h2>
       <input type="number" id="nft1Id" placeholder="ID первого NFT" />
@@ -49,7 +66,7 @@ function App() {
 
       <h2>Ваши NFT</h2>
       <div id="userNFTs">Загрузка...</div>
-    </>
+    </div>
   )
 }
 

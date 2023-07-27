@@ -1,10 +1,117 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
+}
+
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 100vw;
+  background-color: #FFFFFF;
+  margin-bottom: 35px;
+}
+
+.header-text{
+  color: #484779;
+  line-height: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: ITF Devanagari Marathi;
+}
+
+.connection{
+  background-color: #C5C4F1;
+  height: 243px;
+  width: 100vw;
+  padding-top: 43px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+
+
+.connection-header{
+  font-family: Almarai;
+  color: black;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 22.32px;
+  margin-bottom: 11px;
+}
+
+.connection-mainText{
   text-align: center;
+  font-family: ITF Devanagari;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 30px;
+  color: #626D7A;
+}
+
+.connection-mainText-end{
+  margin-bottom: 11px;
 }
 
 #connectWallet{
-  
+  display: flex;
+  justify-content: space-between;
+  width: 285px;
+  height: 44px;
+  border: 1px solid #626D7A;
+  border-radius: 8px;
+  color: #484779;
+  font-size: 20px;
+  font-family: ITF Devanagari Marathi;
+  line-height: 24px;
+  align-items: center;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+#connectWallet:hover{
+  background-color: #484779;
+  color: #C5C4F1;
+}
+
+form{
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 183px;
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label{
+  font-family: ITF Devanagari Marathi;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
+.singleInput{
+  width: 426px;
+  height: 50px;
+}
+
+#dnaInput{
+  width: 238px;
+  height: 50px;
+}
+
+#mintButton{
+  width: 188px;
+  height: 50px;
 }
