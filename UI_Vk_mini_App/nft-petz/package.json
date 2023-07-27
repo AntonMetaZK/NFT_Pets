@@ -11,6 +11,9 @@
     "tunnel": "vk-tunnel --insecure=1 --http-protocol=https --ws-protocol=wss --host=0.0.0.0 --port=10888"
   },
   "dependencies": {
+    "@vkontakte/vk-bridge": "^2.9.0",
+    "@vkontakte/vk-miniapps-deploy": "^0.1.5",
+    "@vkontakte/vk-tunnel": "^0.1.4",
     "ethers": "^6.6.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -18,8 +21,8 @@
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-basic-ssl": "^1.0.1",
     "@vitejs/plugin-react": "^4.0.3",
-    "@vkontakte/vk-tunnel": "^0.1.4",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
