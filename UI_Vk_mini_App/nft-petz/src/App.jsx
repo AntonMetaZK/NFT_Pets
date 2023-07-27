@@ -36,32 +36,39 @@ function App() {
             id="dnaInput"
             placeholder="Введите ДНК (например, 123456)"
           />
-          <button id="mintButton">Создать NFT</button>
+          <button className='inputButton' id="mintButton">Создать NFT</button>
         </div>
       </form>
 
 
+      <form>
+        <label htmlFor='Breeding'>Скрещивание NFT</label>
+        <div>
+          <input name='Breeding' type="number" id="nft1Id" placeholder="ID первого NFT" />
+          <input name='Breeding' type="number" id="nft2Id" placeholder="ID второго NFT" />
+          <button className='inputButton' id="breedButton">Скрестить NFT</button>
+        </div>
+      </form>
 
-      <h2>Скрещивание NFT</h2>
-      <input type="number" id="nft1Id" placeholder="ID первого NFT" />
-      <input type="number" id="nft2Id" placeholder="ID второго NFT" />
-      <button id="breedButton">Скрестить NFT</button>
+      
+      <form className='lastForm'>
+        <label htmlFor='NFTInfo'>Информация о NFT</label>
+        <div>
+          <input name='NFTInfo' type="number" id="nftInfoId" placeholder="ID NFT" />
+          <button className='inputButton' id="getInfoButton">Получить информацию</button>
+        </div>
 
-      <h2>Информация о NFT</h2>
-      <input type="number" id="nftInfoId" placeholder="ID NFT" />
-      <button id="getInfoButton">Получить информацию</button>
-      <div id="nftInfo"></div>
+      </form>
 
-      <script src="ethers.min.js"></script>
-      <script src="app.js"></script>
-
+      {/* <div id="nftInfo"></div> */}
       {currentAccount && (
-        <div id="walletInfo">
-        <strong>Адрес кошелька: {currentAccount.substring(0,6)}...{currentAccount.substring(38)}</strong>
-        <br></br>
-        <strong>Сеть: Siberium Testnet</strong> 
-      </div>
-      )}
+          <div id="walletInfo">
+            <p className='walletInfoText'><strong>Адрес кошелька:</strong> {currentAccount.substring(0,6)}...{currentAccount.substring(38)}</p>
+            <p className='walletInfoText2' ><strong>Сеть:</strong> Siberium Testnet</p>
+          </div>
+        )}
+
+ 
 
 
       <h2>Ваши NFT</h2>

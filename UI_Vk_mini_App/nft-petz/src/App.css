@@ -91,6 +91,7 @@ form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 35px;
 }
 
 label{
@@ -109,9 +110,73 @@ label{
 #dnaInput{
   width: 238px;
   height: 50px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #626D7A;
+  padding-left: 11px;
 }
 
-#mintButton{
+.inputButton{
   width: 188px;
   height: 50px;
+  background-color: #C5C4F1;
+  color: #FFFFFF;
+  border: 1px solid #626D7A;
+  border-radius: 0px 8px 8px 0px;
+  border-left: none;
+}
+
+.inputButton:hover{
+  background-color: #484779;
+  color: #C5C4F1;
+}
+
+#nft1Id{
+  width: 238px;
+  height: 50px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #626D7A;
+  padding-left: 11px;
+  border-right: none;
+}
+
+#nft2Id{
+  width: 238px;
+  height: 50px;
+  border-radius: 0;
+  border: 1px solid #626D7A;
+  padding-left: 11px;
+}
+
+#nftInfoId{
+  width: 238px;
+  height: 50px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #626D7A;
+  padding-left: 11px;
+  border-right: none;
+}
+
+.lastForm{
+  margin: 0;
+}
+
+#walletInfo{
+  background-color: #FFFFFF;
+  height: 104px;
+  width: 100vw;
+  padding-left: 25%;
+}
+
+.walletInfoText{
+  font-family: ITF Devanagari Marathi;
+  font-size: 23px;
+  line-height: 27px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.walletInfoText2{
+  font-family: ITF Devanagari Marathi;
+  font-size: 23px;
+  line-height: 27px;
 }
