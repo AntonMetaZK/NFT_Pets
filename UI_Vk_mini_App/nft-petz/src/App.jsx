@@ -1,4 +1,4 @@
-import './App.css'
+import  './App.css'
 import { useAppContext } from './hooks/useAppContext'
 import defaultProvider from './api/defaultProvider';
 import connectMetaMask from './utils/connectMetaMask';
