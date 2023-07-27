@@ -102,6 +102,25 @@ label{
   margin-bottom: 35px;
 }
 
+.mint{
+  background-color: #FFFFFF;
+  width: 100vw;
+  height: 183px;
+  padding-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.mintText{
+  font-family: ITF Devanagari Marathi;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 35px;
+}
+
 .singleInput{
   width: 426px;
   height: 50px;
@@ -126,6 +145,20 @@ label{
 }
 
 .inputButton:hover{
+  background-color: #484779;
+  color: #C5C4F1;
+}
+
+#mintButton{
+  width: 188px;
+  height: 50px;
+  background-color: #C5C4F1;
+  color: #FFFFFF;
+  border: 1px solid #626D7A;
+  border-radius: 8px;
+}
+
+#mintButton:hover{
   background-color: #484779;
   color: #C5C4F1;
 }

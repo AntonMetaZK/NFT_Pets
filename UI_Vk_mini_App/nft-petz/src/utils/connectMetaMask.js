@@ -8,7 +8,7 @@ const connectMetaMask = async ()=>{
         params: [{
             chainId: "0x1b198",
             rpcUrls: ["https://rpc.test.siberium.net"],
-            chainName: "Siberium Testnet",
+            chainName: "Siberium Test Network",
             nativeCurrency: {
                 name: "SIBR",
                 symbol: "SIBR",

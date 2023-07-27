@@ -1,7 +1,10 @@
 import  './App.css'
 import { useAppContext } from './hooks/useAppContext'
-import defaultProvider from './api/defaultProvider';
+import defaultProvider from './abi/defaultProvider';
 import connectMetaMask from './utils/connectMetaMask';
+import { getNftDnaWithSigner } from './abi/getNFTDNAcontarctWitchSigner';
+import { nftDna } from './abi/NFT_DNA_contract';
+import { parseEther } from 'ethers';
 
 function App() {
   const {contextState, updateContextState} = useAppContext();
@@ -11,6 +14,19 @@ function App() {
     const accountMM = await connectMetaMask();
     updateContextState({currentAccount: accountMM});
     console.log(accountMM);
+  }
+
+  const handleMintClick = async() =>{
+    try{
+      const mintPrice = parseEther("0.1");
+      const nftDnaWithSigner = await getNftDnaWithSigner();
+      const tx = await nftDnaWithSigner.mint({value:mintPrice});
+      console.log("tx: ", tx);
+      const response = await tx.wait();
+      console.log("response: ", response);
+    }catch(error){
+      console.error(error);
+    }
   }
 
   return (
@@ -27,18 +43,18 @@ function App() {
       </div>
       
 
-      <form>
-        <label htmlFor='DNA'>Создание NFT</label> 
-        <div className='singleInput'>
-        <input
+      <div className='mint'>
+        <h2 className='mintText'>Создание NFT цена 0.1 SIBR</h2> 
+        {/* <div className='singleInput'> */}
+        {/* <input
             name='DNA'
             type="number"
             id="dnaInput"
             placeholder="Введите ДНК (например, 123456)"
-          />
-          <button className='inputButton' id="mintButton">Создать NFT</button>
-        </div>
-      </form>
+          /> */}
+          <button onClick={() => handleMintClick()} className='inputButton' id="mintButton">Создать NFT</button>
+        {/* </div> */}
+      </div>
 
 
       <form>
